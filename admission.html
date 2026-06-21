@@ -953,6 +953,11 @@
     document.querySelectorAll('.nepali-year').forEach(function(el) {
       el.textContent = getNepaliYear();
     });
+
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      item.classList.toggle('open');
+    }
   </script>
 </body>
 </html>

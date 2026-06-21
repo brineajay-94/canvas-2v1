@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admission Inquiries - Canvas+2 College of Management</title>
+  <title>Result Templates - Canvas+2 College of Management</title>
   <link rel="icon" href="../assets/images/logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
@@ -28,12 +28,12 @@
       <a href="slider.html" class="sidebar-link"><i class="fas fa-images"></i> Slider</a>
       <a href="notices.html" class="sidebar-link"><i class="fas fa-bullhorn"></i> Notices</a>
 
-      <a href="contacts.html" class="sidebar-link"><i class="fas fa-address-book"></i> Contacts</a>
-      <a href="admissions.html" class="sidebar-link active"><i class="fas fa-envelope"></i> Admissions</a>
+      <a href="contacts.html" class="sidebar-link"><i class="fas fa-envelope"></i> Contacts</a>
+      <a href="admissions.html" class="sidebar-link"><i class="fas fa-user-graduate"></i> Admissions</a>
       <span class="sidebar-nav-label">Results</span>
       <a href="view-result.html" class="sidebar-link"><i class="fas fa-file-invoice"></i> View Result</a>
       <a href="results.html" class="sidebar-link"><i class="fas fa-cog"></i> Manage Sheets</a>
-      <a href="templates.html" class="sidebar-link"><i class="fas fa-file-excel"></i> Templates</a>
+      <a href="templates.html" class="sidebar-link active"><i class="fas fa-file-excel"></i> Templates</a>
     </nav>
     <a href="../index.html" class="sidebar-link" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a>
     <div class="sidebar-footer">
@@ -45,7 +45,7 @@
     <header class="admin-header">
       <div class="header-left">
         <button class="header-btn mobile-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
-        <h1>Admission Inquiries</h1>
+        <h1>Result Templates</h1>
       </div>
       <div class="header-right">
         <button class="header-btn" onclick="toggleAdminTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button>
@@ -56,48 +56,34 @@
     <div class="page-content">
       <div class="panel">
         <div class="panel-header">
-          <span class="panel-title"><i class="fas fa-envelope"></i> All Inquiries</span>
-          <div class="panel-actions">
-            <button class="btn btn-secondary" onclick="loadAdmissions()"><i class="fas fa-sync-alt"></i> Refresh</button>
-          </div>
+          <span class="panel-title"><i class="fas fa-download"></i> Available Templates</span>
         </div>
         <div class="panel-body">
+          <p style="margin-bottom:20px;color:var(--color-fg-muted);">Download a template, fill it with student results, then upload to Google Sheets and connect it via <a href="results.html">Manage Sheets</a>.</p>
           <div class="table-container">
             <table>
               <thead>
                 <tr>
-                  <th style="width:40px;">S.N.</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Program</th>
-                  <th>Message</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Actions</th>
+                  <th>Template Name</th>
+                  <th>Description</th>
+                  <th>Download</th>
                 </tr>
               </thead>
-                <tbody id="admissionsTableBody">
-                  <tr><td colspan="9" style="text-align:center;">Loading inquiries...</td></tr>
-                </tbody>
+              <tbody>
+                <tr>
+                  <td><strong>NEB Format - Management</strong></td>
+                  <td>NEB result format for Management stream — includes compulsory and management subjects.</td>
+                  <td><a href="../templates/neb-format-management.xlsx" class="btn btn-sm btn-primary" download><i class="fas fa-download"></i> Download</a></td>
+                </tr>
+                <tr>
+                  <td><strong>NEB Format - Science</strong></td>
+                  <td>NEB result format for Science stream — includes compulsory and science subjects.</td>
+                  <td><a href="../templates/neb-format-science.xlsx" class="btn btn-sm btn-primary" download><i class="fas fa-download"></i> Download</a></td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="admissionModal">
-    <div class="modal">
-      <div class="modal-header">
-        <span class="modal-title" id="admissionModalTitle">Inquiry Details</span>
-        <button class="modal-close" onclick="closeModal('admissionModal')"><i class="fas fa-times"></i></button>
-      </div>
-      <div class="modal-body">
-        <div id="admissionDetails"></div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" onclick="closeModal('admissionModal')">Close</button>
       </div>
     </div>
   </div>
@@ -108,6 +94,5 @@
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/auth.js"></script>
   <script src="../assets/js/admin/admin.js"></script>
-  <script src="../assets/js/admin/admissions.js"></script>
 </body>
 </html>

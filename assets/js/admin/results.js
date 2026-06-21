@@ -13,7 +13,7 @@ async function loadSheets() {
   try {
     const snapshot = await db.collection('resultSheets').get();
     if (snapshot.empty) {
-      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;">No result sheets found. Create one to get started.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;">No result sheets found. Create one to get started.</td></tr>';
       return;
     }
 
@@ -24,7 +24,8 @@ async function loadSheets() {
       tr.innerHTML = `
         <td><strong>${s.name}</strong></td>
         <td><span class="badge badge-${s.classLevel || '11'}">${'Class ' + (s.classLevel || '11')}</span></td>
-        <td style="font-size:0.85rem;font-family:monospace;">${s.googleSheetId || '-'}</td>
+        <td style="font-size:0.85rem;font-family:monospace;max-width:200px;overflow:hidden;text-overflow:ellipsis;">${s.webUrl ? `<a href="${s.webUrl}" target="_blank" title="${s.webUrl}">${s.webUrl.length > 30 ? s.webUrl.substring(0,30)+'...' : s.webUrl}</a>` : '<span style="color:var(--color-danger-fg)">Not set</span>'}</td>
+        <td>${s.tabName || '-'}</td>
         <td>
           <span class="badge badge-${s.active ? 'active' : 'inactive'}">
             ${s.active ? 'Active' : 'Inactive'}
@@ -49,7 +50,7 @@ async function loadSheets() {
       tbody.appendChild(tr);
     });
   } catch (err) {
-    tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--color-danger-fg);">Error loading sheets.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;color:var(--color-danger-fg);">Error loading sheets.</td></tr>';
   }
 }
 
@@ -58,6 +59,7 @@ function openAddSheetModal() {
   document.getElementById('sheetModalTitle').textContent = 'Add Result Sheet';
   document.getElementById('sheetForm').reset();
   document.getElementById('sheetClassLevel').value = '';
+  document.getElementById('testResult').textContent = '';
   resetDirty();
   openModal('sheetModal');
 }
@@ -73,6 +75,9 @@ async function editSheet(sheetId) {
     document.getElementById('sheetName').value = s.name || '';
     document.getElementById('sheetClassLevel').value = s.classLevel || '';
     document.getElementById('sheetGoogleId').value = s.googleSheetId || '';
+    document.getElementById('sheetWebUrl').value = s.webUrl || '';
+    document.getElementById('sheetTabName').value = s.tabName || '';
+    document.getElementById('testResult').textContent = '';
     resetDirty();
     openModal('sheetModal');
   } catch (err) {
@@ -86,6 +91,8 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
   const name = document.getElementById('sheetName').value.trim();
   const classLevel = document.getElementById('sheetClassLevel').value;
   const googleSheetId = document.getElementById('sheetGoogleId').value.trim();
+  const webUrl = document.getElementById('sheetWebUrl').value.trim();
+  const tabName = document.getElementById('sheetTabName').value.trim();
 
   if (!name) {
     showToast('Sheet name is required', 'error');
@@ -93,6 +100,10 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
   }
   if (!classLevel) {
     showToast('Please select a class level', 'error');
+    return;
+  }
+  if (!webUrl) {
+    showToast('Web App URL is required', 'error');
     return;
   }
 
@@ -105,7 +116,9 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
       await db.collection('resultSheets').doc(editingSheetId).update({
         name,
         classLevel,
-        googleSheetId
+        googleSheetId,
+        webUrl,
+        tabName
       });
       showToast('Sheet updated successfully');
       resetDirty();
@@ -114,6 +127,8 @@ document.getElementById('sheetForm').addEventListener('submit', async (e) => {
         name,
         classLevel,
         googleSheetId,
+        webUrl,
+        tabName,
         active: false,
         published: false,
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -159,6 +174,32 @@ async function deleteSheet(sheetId) {
     loadSheets();
   } catch (err) {
     showToast('Error deleting sheet', 'error');
+  }
+}
+
+async function testConnection() {
+  const webUrl = document.getElementById('sheetWebUrl').value.trim();
+  const sheetId = document.getElementById('sheetGoogleId').value.trim();
+  const testResult = document.getElementById('testResult');
+
+  if (!webUrl) {
+    testResult.innerHTML = '<span style="color:var(--color-danger-fg)">Enter a Web App URL first</span>';
+    return;
+  }
+
+  testResult.innerHTML = '<span style="color:var(--color-fg-muted)">Testing connection...</span>';
+  sheetsService.setWebAppUrl(webUrl);
+
+  try {
+    const sheets = await sheetsService.listSheets(sheetId || undefined);
+    if (sheets && sheets.length) {
+      testResult.innerHTML = `<span style="color:var(--color-success-fg)">Connected! Available tabs: ${sheets.join(', ')}</span>`;
+      document.getElementById('sheetTabName').placeholder = `e.g. ${sheets[0]}`;
+    } else {
+      testResult.innerHTML = '<span style="color:var(--color-warning-fg)">Connected but no tabs found</span>';
+    }
+  } catch (err) {
+    testResult.innerHTML = `<span style="color:var(--color-danger-fg)">Connection failed: ${err.message}</span>`;
   }
 }
 
