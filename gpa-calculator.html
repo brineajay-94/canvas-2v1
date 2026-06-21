@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator Nepal | NEB Grade Calculator | Canvas+2 College Gaighat Udayapur</title>
+  <meta name="description" content="Free GPA calculator for NEB Class 11 and 12 results. Calculate your grade point average for Nepali higher secondary education with our easy-to-use online tool for Canvas+2 College students.">
+  <meta name="keywords" content="GPA calculator Nepal, NEB GPA calculator, Class 11 GPA, Class 12 GPA, NEB grade calculator, grade point average Nepal, higher secondary GPA, Canvas+2 GPA, Nepal education grading system, calculate NEB grade">
+  <meta name="author" content="Canvas+2 College of Management">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="revisit-after" content="7 days">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="NP-P1">
+  <meta name="geo.placename" content="Triyuga, Udayapur, Nepal">
+  <meta name="geo.position" content="26.775;87.165">
+  <meta name="ICBM" content="26.775, 87.165">
+  <link rel="canonical" href="https://canvascollege.ajaykafle.com.np/gpa-calculator.html">
+  <meta property="og:title" content="GPA Calculator Nepal | Calculate NEB Grade | Canvas+2 College">
+  <meta property="og:description" content="Free GPA calculator for NEB Class 11 and 12 results. Calculate your grade point average for Nepali higher secondary education.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://canvascollege.ajaykafle.com.np/gpa-calculator.html">
+  <meta property="og:image" content="https://canvascollege.ajaykafle.com.np/assets/images/logo.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Canvas+2 College of Management - GPA Calculator">
+  <meta property="og:site_name" content="Canvas+2 College of Management">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPA Calculator Nepal | Calculate NEB Grade | Canvas+2 College">
+  <meta name="twitter:description" content="Free GPA calculator for NEB Class 11 and 12 results. Calculate your grade point average for Nepali higher secondary education.">
+  <meta name="twitter:image" content="https://canvascollege.ajaykafle.com.np/assets/images/logo.png">
+  <meta name="twitter:image:alt" content="Canvas+2 College of Management - GPA Calculator">
+  <meta name="theme-color" content="#1a3c6d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Canvas+2 College">
+  <meta name="msapplication-TileColor" content="#1a3c6d">
+  <meta name="msapplication-starturl" content="https://canvascollege.ajaykafle.com.np/gpa-calculator.html">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "NEB GPA Calculator",
+    "url": "https://canvascollege.ajaykafle.com.np/gpa-calculator.html",
+    "description": "Calculate your NEB Grade 11 and 12 GPA with this easy-to-use online calculator. Supports all NEB grading subjects with credit hours.",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "applicationCategory": "EducationalApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "NPR"
+    },
+    "publisher": {
+      "@type": "CollegeOrUniversity",
+      "name": "Canvas+2 College of Management",
+      "url": "https://canvascollege.ajaykafle.com.np/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://canvascollege.ajaykafle.com.np/"},
+      {"@type": "ListItem", "position": 2, "name": "GPA Calculator", "item": "https://canvascollege.ajaykafle.com.np/gpa-calculator.html"}
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gpa-hero {
+      background: linear-gradient(145deg, #1a3c6d 0%, #1f4d8c 55%, #15325a 100%);
+      color: #fff;
+      padding: 60px 28px;
+      text-align: center;
+    }
+    .gpa-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .gpa-hero p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .gpa-section {
+      padding: 50px 28px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .gpa-section .section-title {
+      text-align: center;
+    }
+    .gpa-tool {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 34px 28px;
+      border: 1px solid var(--gray-light);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gpa-table-wrap {
+      overflow-x: auto;
+    }
+    .gpa-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .gpa-table th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .gpa-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .gpa-table tr:nth-child(even) td {
+      background: var(--off-white);
+    }
+    .gpa-table input[type="text"] {
+      width: 100%;
+      min-width: 110px;
+      padding: 8px 10px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+      transition: var(--transition);
+    }
+    .gpa-table input[type="text"]:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(44,90,160,0.12);
+    }
+    .gpa-table select {
+      width: 100%;
+      min-width: 65px;
+      padding: 8px 10px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+      background: var(--white);
+      transition: var(--transition);
+    }
+    .gpa-table select:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(44,90,160,0.12);
+    }
+    .remove-btn {
+      background: none;
+      border: none;
+      color: var(--danger);
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    .remove-btn:hover {
+      background: #fbe9e7;
+    }
+    .gpa-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .gpa-toolbar .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .gpa-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .gpa-result-card {
+      background: var(--off-white);
+      border-radius: var(--radius-sm);
+      padding: 18px 16px;
+      text-align: center;
+      border: 1px solid var(--gray-light);
+    }
+    .gpa-result-card .label {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .gpa-result-card .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 4px;
+      font-family: var(--font-heading);
+    }
+    .gpa-result-card .value.gpa-high {
+      color: var(--success);
+    }
+    .gpa-result-card .value.gpa-mid {
+      color: var(--warning);
+    }
+    .gpa-result-card .value.gpa-low {
+      color: var(--danger);
+    }
+    .gpa-result-card .grade-letter {
+      font-size: 2.4rem;
+      font-weight: 800;
+    }
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin: 30px 0;
+    }
+    .how-step {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-light);
+      transition: var(--transition);
+    }
+    .how-step:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .how-step .step-num {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0 auto 12px;
+    }
+    .how-step h4 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .how-step p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    .grade-ref {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .grade-ref table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .grade-ref th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 14px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .grade-ref td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .grade-ref tr:nth-child(even) td {
+      background: var(--off-white);
+    }
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-light);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 16px 20px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .faq-question:hover {
+      background: var(--off-white);
+    }
+    .faq-question i {
+      transition: transform 0.3s;
+    }
+    .faq-question.open i {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .faq-answer.open {
+      max-height: 300px;
+      padding: 0 20px 16px;
+    }
+    @media (max-width: 768px) {
+      .gpa-hero h1 { font-size: 1.5rem; }
+      .gpa-hero { padding: 40px 18px; }
+      .gpa-section { padding: 36px 18px; }
+      .gpa-tool { padding: 20px 14px; }
+      .gpa-table th, .gpa-table td { padding: 8px 8px; font-size: 0.85rem; }
+      .gpa-table input[type="text"] { min-width: 80px; font-size: 0.85rem; padding: 6px 8px; }
+      .gpa-table select { min-width: 55px; font-size: 0.85rem; padding: 6px 8px; }
+      .gpa-result-card .value { font-size: 1.4rem; }
+      .gpa-result-card .grade-letter { font-size: 1.8rem; }
+      .gpa-toolbar { flex-direction: column; align-items: stretch; }
+      .gpa-toolbar .btn-group { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .gpa-table input[type="text"] { min-width: 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span><i class="fas fa-map-marker-alt"></i> Triyuga-11, Gaighat, Udayapur, Nepal</span>
+      <div class="contact-mini">
+        <span><i class="fas fa-phone-alt"></i> <a href="tel:9851321240">9851321240</a></span>
+        <span><i class="fas fa-phone-alt"></i> <a href="tel:035590558">035590558</a></span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <img src="assets/images/logo.png" alt="Canvas+2 College of Management" class="logo-img" loading="lazy" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <div style="font-size:1.35rem;font-weight:700;color:#1a3c6d;line-height:1.2;letter-spacing:0.5px;font-family:var(--font-heading);">Canvas+2 College of Management</div>
+          <p class="tagline">Excellence in Education</p>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+                <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="notices.html">Notices</a></li>
+
+          <li><a href="result.html">Result</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+      </div>
+    </div>
+  </header>
+
+  <section class="gpa-hero">
+    <h1><i class="fas fa-calculator"></i> NEB GPA Calculator - Grade 11 &amp; 12</h1>
+    <p>Calculate your Grade Point Average for NEB Class 11 and 12 results. Add your subjects, credit hours, and grades to compute your GPA instantly.</p>
+  </section>
+
+  <section class="gpa-section" id="how-it-works">
+    <span class="section-label">Guide</span>
+    <h2 class="section-title">How It Works</h2>
+    <div class="how-it-works">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <h4>Add Subjects</h4>
+        <p>Enter your subject names and select the credit hours assigned by NEB for each subject.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <h4>Select Grades</h4>
+        <p>Choose the grade you obtained for each subject from the dropdown (A+ to NG).</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <h4>Get Your GPA</h4>
+        <p>Your GPA is calculated automatically based on NEB grading guidelines. Results update in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gpa-section" id="calculator">
+    <span class="section-label">Tool</span>
+    <h2 class="section-title">GPA Calculator</h2>
+    <div class="gpa-tool">
+      <div class="gpa-table-wrap">
+        <table class="gpa-table" id="subjectTable">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th style="width:100px;">Credit Hours</th>
+              <th style="width:100px;">Grade</th>
+              <th style="width:40px;"></th>
+            </tr>
+          </thead>
+          <tbody id="subjectBody">
+          </tbody>
+        </table>
+      </div>
+      <div class="gpa-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="addSubject()"><i class="fas fa-plus"></i> Add Subject</button>
+          <button class="btn btn-outline" onclick="clearAll()"><i class="fas fa-trash-alt"></i> Clear All</button>
+        </div>
+      </div>
+      <div class="gpa-result-grid" id="resultGrid">
+        <div class="gpa-result-card">
+          <div class="label">Total Credit Hours</div>
+          <div class="value" id="totalCredits">0</div>
+        </div>
+        <div class="gpa-result-card">
+          <div class="label">Grade Points Earned</div>
+          <div class="value" id="totalPoints">0</div>
+        </div>
+        <div class="gpa-result-card">
+          <div class="label">GPA</div>
+          <div class="value" id="gpaValue">0.00</div>
+        </div>
+        <div class="gpa-result-card">
+          <div class="label">Grade</div>
+          <div class="value grade-letter" id="gradeLetter">-</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gpa-section" id="grading-reference">
+    <span class="section-label">Reference</span>
+    <h2 class="section-title">NEB Grading System</h2>
+    <p class="section-desc" style="text-align:center;margin:0 auto 24px;">The NEB (National Examination Board) of Nepal uses the following grading scale for Class 11 and 12:</p>
+    <div class="grade-ref">
+      <table>
+        <thead>
+          <tr>
+            <th>Grade</th>
+            <th>Grade Point</th>
+            <th>Percentage Range</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>A+</td><td>4.0</td><td>90% - 100%</td><td>Outstanding</td></tr>
+          <tr><td>A</td><td>3.6</td><td>80% - 89%</td><td>Excellent</td></tr>
+          <tr><td>B+</td><td>3.2</td><td>70% - 79%</td><td>Very Good</td></tr>
+          <tr><td>B</td><td>2.8</td><td>60% - 69%</td><td>Good</td></tr>
+          <tr><td>C+</td><td>2.4</td><td>50% - 59%</td><td>Above Average</td></tr>
+          <tr><td>C</td><td>2.0</td><td>40% - 49%</td><td>Average</td></tr>
+          <tr><td>D</td><td>1.6</td><td>30% - 39%</td><td>Below Average</td></tr>
+          <tr><td>E</td><td>0.8</td><td>20% - 29%</td><td>Insufficient</td></tr>
+          <tr><td>NG</td><td>0.0</td><td>-</td><td>Non Graded</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="gpa-section" id="faq">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How is GPA calculated in NEB?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">GPA is calculated by dividing the total grade points earned by the total credit hours. For each subject, the grade point (e.g., A+ = 4.0) is multiplied by the credit hours to get the grade points earned. Sum all grade points and divide by total credit hours to get your GPA.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What credit hours do NEB subjects have?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">NEB assigns credit hours to each subject based on the curriculum. Common subjects like English, Nepali, and Mathematics typically have 4-5 credit hours, while elective subjects may have 2-3 credit hours. Check your NEB curriculum for exact credit hours per subject.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is a good GPA in NEB Class 11 and 12?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">In the NEB system, a GPA of 3.6 (A) or above is considered excellent. A GPA of 3.2 (B+) is very good, and 2.8 (B) is good. Most competitive university programs expect at least a 2.8-3.2 GPA for admission.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I use this calculator for both Class 11 and 12?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">Yes! This GPA calculator works for both NEB Class 11 and Class 12 results. Simply add all your subjects with their respective credit hours and grades. The GPA is calculated using the standard NEB 4.0 grading scale.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What does NG (Non Graded) mean?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">NG stands for Non Graded. It is assigned when a student does not meet the minimum requirements for a grade in a subject. NG carries 0 grade points and does not contribute to your GPA calculation.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> <strong>Canvas+2 College of Management</strong>. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var GRADE_POINTS = {
+      'A+': 4.0, 'A': 3.6, 'B+': 3.2, 'B': 2.8,
+      'C+': 2.4, 'C': 2.0, 'D': 1.6, 'E': 0.8, 'NG': 0.0
+    };
+
+    var GRADE_LETTERS = [
+      { min: 3.6, grade: 'A+' },
+      { min: 3.2, grade: 'A' },
+      { min: 2.8, grade: 'B+' },
+      { min: 2.4, grade: 'B' },
+      { min: 2.0, grade: 'C+' },
+      { min: 1.6, grade: 'C' },
+      { min: 0.8, grade: 'D' },
+      { min: 0.0, grade: 'E' }
+    ];
+
+    var DEFAULT_SUBJECTS = [
+      { name: 'English', credits: 5, grade: 'B+' },
+      { name: 'Nepali', credits: 5, grade: 'B+' },
+      { name: 'Mathematics', credits: 5, grade: 'B' },
+      { name: 'Accountancy', credits: 5, grade: 'B+' },
+      { name: 'Social Studies', credits: 4, grade: 'B' },
+      { name: 'Computer Science', credits: 4, grade: 'A' }
+    ];
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+      initNavToggle();
+
+      var tbody = document.getElementById('subjectBody');
+      DEFAULT_SUBJECTS.forEach(function (s) {
+        addSubjectRow(s.name, s.credits, s.grade);
+      });
+      calculateGPA();
+    });
+
+    function initNavToggle() {
+      var toggle = document.querySelector('.nav-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          document.querySelector('nav ul').classList.toggle('open');
+        });
+      }
+      document.querySelectorAll('nav ul li a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          document.querySelector('nav ul')?.classList.remove('open');
+        });
+      });
+    }
+
+    function addSubject(name, credits, grade) {
+      addSubjectRow(name, credits, grade);
+      calculateGPA();
+    }
+
+    function addSubjectRow(name, credits, grade) {
+      var tbody = document.getElementById('subjectBody');
+      var tr = document.createElement('tr');
+
+      var tdName = document.createElement('td');
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.value = name || '';
+      input.placeholder = 'Subject name';
+      input.oninput = calculateGPA;
+      tdName.appendChild(input);
+
+      var tdCredits = document.createElement('td');
+      var selCredits = document.createElement('select');
+      for (var c = 1; c <= 5; c++) {
+        var opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        if (c === (credits || 5)) opt.selected = true;
+        selCredits.appendChild(opt);
+      }
+      selCredits.onchange = calculateGPA;
+      tdCredits.appendChild(selCredits);
+
+      var tdGrade = document.createElement('td');
+      var selGrade = document.createElement('select');
+      var grades = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D', 'E', 'NG'];
+      grades.forEach(function (g) {
+        var opt = document.createElement('option');
+        opt.value = g;
+        opt.textContent = g;
+        if (g === (grade || 'B+')) opt.selected = true;
+        selGrade.appendChild(opt);
+      });
+      selGrade.onchange = calculateGPA;
+      tdGrade.appendChild(selGrade);
+
+      var tdRemove = document.createElement('td');
+      var rmBtn = document.createElement('button');
+      rmBtn.className = 'remove-btn';
+      rmBtn.innerHTML = '<i class="fas fa-times-circle"></i>';
+      rmBtn.onclick = function () {
+        tr.remove();
+        calculateGPA();
+      };
+      tdRemove.appendChild(rmBtn);
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdCredits);
+      tr.appendChild(tdGrade);
+      tr.appendChild(tdRemove);
+      tbody.appendChild(tr);
+    }
+
+    function calculateGPA() {
+      var rows = document.querySelectorAll('#subjectBody tr');
+      var totalCredits = 0;
+      var totalGradePoints = 0;
+      var countedSubjects = 0;
+
+      rows.forEach(function (row) {
+        var inputs = row.querySelectorAll('input, select');
+        if (inputs.length < 2) return;
+        var credits = parseFloat(inputs[0].value) || 0;
+        var grade = inputs[1].value;
+        var gp = GRADE_POINTS[grade] || 0;
+        totalCredits += credits;
+        totalGradePoints += gp * credits;
+        countedSubjects++;
+      });
+
+      var gpa = totalCredits > 0 ? totalGradePoints / totalCredits : 0;
+      gpa = Math.round(gpa * 100) / 100;
+
+      document.getElementById('totalCredits').textContent = totalCredits;
+      document.getElementById('totalPoints').textContent = totalGradePoints.toFixed(1);
+
+      var gpaEl = document.getElementById('gpaValue');
+      gpaEl.textContent = gpa.toFixed(2);
+      gpaEl.className = 'value';
+      if (gpa >= 3.2) gpaEl.classList.add('gpa-high');
+      else if (gpa >= 2.0) gpaEl.classList.add('gpa-mid');
+      else if (gpa > 0) gpaEl.classList.add('gpa-low');
+
+      var letter = '-';
+      if (totalCredits > 0 && countedSubjects > 0) {
+        for (var i = 0; i < GRADE_LETTERS.length; i++) {
+          if (gpa >= GRADE_LETTERS[i].min) {
+            letter = GRADE_LETTERS[i].grade;
+            break;
+          }
+        }
+      }
+      document.getElementById('gradeLetter').textContent = letter;
+    }
+
+    function clearAll() {
+      if (!confirm('Remove all subjects and start over?')) return;
+      document.getElementById('subjectBody').innerHTML = '';
+      calculateGPA();
+    }
+
+    function toggleFaq(el) {
+      el.classList.toggle('open');
+      var answer = el.nextElementSibling;
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: http://canvascollege.ajaykafle.com.np/sitemap.xml
+
+# Disallow admin and teacher panels
+Disallow: /admin/
+Disallow: /teacher/

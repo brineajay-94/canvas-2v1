@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 11 & 12 Result | Canvas+2 College of Management, Gaighat Udayapur</title>
+  <meta name="description" content="View NEB results for Class 11 and Class 12 at Canvas+2 College of Management. Search by symbol number, check GPA, and download grade sheets online. Triyuga, Gaighat, Udayapur.">
+  <meta name="keywords" content="Canvas+2 Result, Class 11 Result, Class 12 Result, NEB Grade Sheet, Plus Two Result Udayapur, Canvas+2 College Result, NEB Result Check, Symbol Number Result, Canvas+2 Grade Sheet, Grade Sheet Check Nepal, Canvas+2 Class 12, Canvas+2 Class 11">
+  <meta name="author" content="Canvas+2 College of Management">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="revisit-after" content="3 days">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="NP-P1">
+  <meta name="geo.placename" content="Triyuga, Udayapur, Nepal">
+  <meta name="geo.position" content="26.775;87.165">
+  <link rel="canonical" href="https://canvascollege.ajaykafle.com.np/result.html">
+  <meta property="og:title" content="Result - NEB Grade Sheet | Canvas+2 College of Management">
+  <meta property="og:description" content="View NEB results for Class 11 and Class 12 at Canvas+2 College of Management. Search by symbol number and check your GPA online.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://canvascollege.ajaykafle.com.np/result.html">
+  <meta property="og:image" content="https://canvascollege.ajaykafle.com.np/assets/images/logo.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Canvas+2 College of Management Logo">
+  <meta property="og:site_name" content="Canvas+2 College of Management">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Result - Canvas+2 College of Management | NEB Grade Sheet">
+  <meta name="twitter:description" content="View NEB results for Class 11 and Class 12 at Canvas+2 College of Management. Search by symbol number and check your GPA.">
+  <meta name="twitter:image" content="https://canvascollege.ajaykafle.com.np/assets/images/logo.png">
+  <meta name="theme-color" content="#1a3c6d">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://canvascollege.ajaykafle.com.np/" },
+          { "@type": "ListItem", "position": 2, "name": "Result", "item": "https://canvascollege.ajaykafle.com.np/result.html" }
+        ]
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Canvas+2 College of Management",
+        "url": "https://canvascollege.ajaykafle.com.np/",
+        "description": "Check your NEB Class 11 and Class 12 results online at Canvas+2 College of Management, Triyuga, Gaighat, Udayapur.",
+        "telephone": "9851321240",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Triyuga-11, Gaighat",
+          "addressLocality": "Udayapur",
+          "addressCountry": "NP"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .result-search-card {
+      background: var(--white);
+      border: 1px solid #e0e5ec;
+      border-radius: 16px;
+      padding: 36px 40px;
+      max-width: 580px;
+      margin: 0 auto 50px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .result-search-card label { display:block; margin-bottom:6px; font-weight:600; color:var(--text); font-size:0.9rem; }
+    .result-search-card select,
+    .result-search-card input {
+      width:100%; padding:12px 14px; border:1px solid #d0d7de; border-radius:8px;
+      font-size:0.95rem; background:var(--white); color:var(--text);
+      transition:border-color 0.2s; box-sizing:border-box;
+    }
+    .result-search-card select:focus,
+    .result-search-card input:focus { outline:none; border-color:var(--primary); box-shadow:0 0 0 3px rgba(26,60,109,0.1); }
+    .sheets-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:20px; max-width:900px; margin:0 auto;
+    }
+    .sheet-card {
+      background:var(--white); border:1px solid #e0e5ec; border-radius:12px;
+      padding:20px 24px; text-align:left;
+      transition:box-shadow 0.2s,transform 0.2s;
+    }
+    .sheet-card:hover { box-shadow:0 6px 24px rgba(0,0,0,0.08); transform:translateY(-2px); }
+    .sheet-card h4 { margin:0 0 4px; font-size:1rem; color:var(--text); }
+    .sheet-card .meta { font-size:0.82rem; color:var(--text-light); }
+    .sheet-card .badge { display:inline-block; padding:2px 10px; border-radius:12px; font-size:0.75rem; font-weight:600; }
+    .badge-active { background:#dafbe1; color:#116329; }
+    .badge-inactive { background:#f6f8fa; color:#656d76; }
+    .section-subtitle { font-size:0.8rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--primary); font-weight:700; margin-bottom:4px; }
+    .class-section { margin-bottom:40px; }
+    .class-section:last-child { margin-bottom:0; }
+    .empty-sheets { text-align:center; padding:40px; color:var(--text-light); font-size:0.95rem; }
+    .grading-table-wrap { overflow-x:auto; max-width:600px; margin:0 auto; }
+    .grading-table-wrap table { width:100%; border-collapse:collapse; }
+    .grading-table-wrap th { background:#f4f6f8; color:#1f2328; padding:10px 16px; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; text-align:center; border-bottom:2px solid var(--primary); }
+    .grading-table-wrap td { padding:10px 16px; border-bottom:1px solid #e0e5ec; text-align:center; font-size:0.9rem; }
+    .grading-table-wrap tr:hover td { background:#f8f9fb; }
+    .result-display-wrap { max-width:800px; margin:30px auto 0; text-align:left; }
+    .result-summary { background:var(--white); border:1px solid #e0e5ec; border-radius:16px; padding:30px 36px; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+    @media (max-width:600px) {
+      .result-search-card { padding:24px 18px; }
+      .sheets-grid { grid-template-columns:1fr; }
+      .grading-table-wrap th,.grading-table-wrap td { padding:8px 10px; font-size:0.8rem; }
+    }
+    .faq-list { max-width:700px; margin:0 auto; text-align:left; }
+    .faq-item { border:1px solid #e0e5ec; border-radius:12px; margin-bottom:12px; overflow:hidden; background:var(--white); transition:box-shadow 0.2s; }
+    .faq-item:hover { box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+    .faq-question { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; font-weight:600; color:var(--text); cursor:pointer; font-size:0.95rem; user-select:none; }
+    .faq-question i { font-size:0.75rem; color:var(--primary); transition:transform 0.3s; }
+    .faq-item.open .faq-question i { transform:rotate(180deg); }
+    .faq-answer { padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; color:var(--text-light); font-size:0.9rem; line-height:1.6; }
+    .faq-item.open .faq-answer { max-height:300px; padding:0 20px 16px; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span><i class="fas fa-map-marker-alt"></i> Triyuga-11, Gaighat, Udayapur, Nepal</span>
+      <div class="contact-mini">
+        <span><i class="fas fa-phone-alt"></i> <a href="tel:9851321240">9851321240</a></span>
+        <span><i class="fas fa-phone-alt"></i> <a href="tel:035590558">035590558</a></span>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <img src="assets/images/logo.png" alt="Canvas+2 College of Management" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <div style="font-size:1.35rem;font-weight:700;color:#1a3c6d;line-height:1.2;letter-spacing:0.5px;font-family:var(--font-heading);">Canvas+2 College of Management</div>
+          <p class="tagline">Excellence in Education</p>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+                <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="notices.html">Notices</a></li>
+
+          <li><a href="result.html" class="active">Result</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+      </div>
+    </div>
+  </header>
+
+  <section class="section" style="text-align:center;">
+    <div class="breadcrumb" style="justify-content:center;margin-bottom:20px;">
+      <a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:0.65rem;margin:0 8px;opacity:0.5;"></i> <span>Result</span>
+    </div>
+    <span class="section-label">Results</span>
+    <h2 class="section-title">Search Your Result</h2>
+    <p class="section-desc" style="margin:0 auto 30px;">Select your result sheet and enter your symbol number to view your grade sheet online.</p>
+
+    <div class="result-search-card">
+      <div class="form-group" style="text-align:left;">
+        <label for="resultSheet"><i class="fas fa-file-alt"></i> Select Result Sheet</label>
+        <select id="resultSheet">
+          <option value="">-- Select Result Sheet --</option>
+        </select>
+      </div>
+      <div class="form-group" style="text-align:left;margin-top:16px;">
+        <label for="symbolNumber"><i class="fas fa-hashtag"></i> Symbol Number</label>
+        <input type="text" id="symbolNumber" placeholder="Enter your symbol number" autocomplete="off" onkeydown="if(event.key==='Enter')searchResult()">
+      </div>
+      <button class="btn btn-primary btn-block btn-lg" onclick="searchResult()" style="margin-top:20px;">
+        <i class="fas fa-search"></i> Search Result
+      </button>
+      <div id="searchStatus" style="margin-top:16px;font-size:0.9rem;color:var(--text-light);"></div>
+    </div>
+
+    <div id="resultDisplay" class="result-display-wrap"></div>
+
+    <hr style="border:none;border-top:1px solid #e0e5ec;margin:50px auto;max-width:600px;">
+
+    <span class="section-subtitle" style="text-align:center;">Available Results</span>
+    <h2 class="section-title" style="text-align:center;">All Published Results</h2>
+    <p class="section-desc" style="margin:0 auto 40px;">Browse all available result sheets for Class 11 and Class 12 below.</p>
+
+    <div id="sheetsContainer">
+      <div class="empty-sheets"><i class="fas fa-spinner fa-spin"></i> Loading results...</div>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #e0e5ec;margin:50px auto;max-width:600px;">
+
+    <span class="section-subtitle" style="text-align:center;">NEB Grading System</span>
+    <h2 class="section-title" style="text-align:center;">+2 Grading System</h2>
+    <p class="section-desc" style="margin:0 auto 30px;">NEB (National Examination Board) uses a letter grading system for Class 11 and Class 12. Understanding the grading scale helps you interpret your results.</p>
+
+    <div class="grading-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Grade</th>
+            <th>Grade Point</th>
+            <th>Percentage</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="font-weight:700;color:#1a3c6d;">A+</td><td style="font-weight:600;">4.0</td><td>90% – 100%</td><td>Outstanding</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">A</td><td style="font-weight:600;">3.6</td><td>80% – 89%</td><td>Excellent</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">B+</td><td style="font-weight:600;">3.2</td><td>70% – 79%</td><td>Very Good</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">C+</td><td style="font-weight:600;">2.8</td><td>60% – 69%</td><td>Good</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">C</td><td style="font-weight:600;">2.4</td><td>50% – 59%</td><td>Satisfactory</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">D+</td><td style="font-weight:600;">2.0</td><td>40% – 49%</td><td>Acceptable</td></tr>
+          <tr><td style="font-weight:700;color:#1a3c6d;">D</td><td style="font-weight:600;">1.6</td><td>35% – 39%</td><td>Partially Acceptable</td></tr>
+          <tr><td style="font-weight:700;color:#cf222e;">NG</td><td style="font-weight:600;color:#cf222e;">0.0</td><td>Below 35%</td><td>Non Graded</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-top:16px;">Minimum passing grade: D (35%). A GPA of 1.6 or above is required to pass.</p>
+
+    <hr style="border:none;border-top:1px solid #e0e5ec;margin:50px auto;max-width:600px;">
+
+    <span class="section-subtitle" style="text-align:center;">FAQ</span>
+    <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
+    <p class="section-desc" style="margin:0 auto 30px;">Common questions about NEB results and grade sheets at Canvas+2 College.</p>
+
+    <div class="faq-list" style="max-width:700px;margin:0 auto;text-align:left;">
+      <div class="faq-item open">
+        <div class="faq-question" onclick="toggleFaq(this)">How can I check my result? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Select your result sheet from the dropdown, enter your symbol number, and click "Search Result". Your grade sheet with subject-wise grades and GPA will be displayed instantly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">What is the grading system for +2 in Nepal? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">NEB uses a letter grading system from A+ (Outstanding) to NG (Non Graded). Each grade has a corresponding grade point from 4.0 down to 0.0. The minimum passing grade is D (35% or 1.6 GPA).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Can I download my grade sheet? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes, once your result is displayed, you can use the print option to save it as a PDF or take a screenshot for your records.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">I cannot find my result. What should I do? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Make sure you have selected the correct result sheet and entered the exact symbol number. If the issue persists, contact the college administration office at Triyuga-11, Gaighat, Udayapur, or call 9851321240.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Are results for both Class 11 and Class 12 available? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes, we publish results for both Class 11 and Class 12. Simply select the appropriate result sheet from the dropdown based on your class and program.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> <strong>Canvas+2 College of Management</strong>. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/sheets-service.js"></script>
+  <script src="assets/js/subject-utils.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      authService.init();
+      initNavToggle();
+      loadPublishedSheets();
+      loadAllSheets();
+      loadContactInfo();
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    });
+
+    function toggleFaq(el) {
+      var item = el.parentElement;
+      item.classList.toggle('open');
+    }
+
+    async function loadContactInfo() {
+      try {
+        var doc = await db.collection('settings').doc('general').get();
+        if (!doc.exists) return;
+        var s = doc.data();
+        if (s.address) document.querySelector('.top-bar-inner span').innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + s.address;
+        var mini = document.querySelector('.contact-mini');
+        mini.innerHTML = '<span><i class="fas fa-phone-alt"></i> <a href="tel:' + (s.phone || '9851321240') + '">' + (s.phone || '9851321240') + '</a></span>' + '<span><i class="fas fa-phone-alt"></i> <a href="tel:' + (s.phone2 || '035590558') + '">' + (s.phone2 || '035590558') + '</a></span>';
+      } catch(e) {}
+    }
+
+    function initNavToggle() {
+      document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('open');
+      });
+    }
+
+    async function loadPublishedSheets() {
+      var select = document.getElementById('resultSheet');
+      try {
+        var snap = await db.collection('resultSheets').where('published', '==', true).get();
+        if (snap.empty) {
+          select.innerHTML = '<option value="">-- No results available yet --</option>';
+          return;
+        }
+        var opts = '<option value="">-- Select Result Sheet --</option>';
+        snap.forEach(function(doc) {
+          var d = doc.data();
+          opts += '<option value="' + doc.id + '">Class ' + (d.classLevel || '12') + ' - ' + d.name + '</option>';
+        });
+        select.innerHTML = opts;
+      } catch(e) {
+        select.innerHTML = '<option value="">-- Error loading sheets --</option>';
+      }
+    }
+
+    async function loadAllSheets() {
+      var container = document.getElementById('sheetsContainer');
+      try {
+        var snap = await db.collection('resultSheets').where('published', '==', true).get();
+        if (snap.empty) {
+          container.innerHTML = '<div class="empty-sheets"><i class="fas fa-info-circle"></i> No published results yet. Check back later.</div>';
+          return;
+        }
+        var all = [];
+        snap.forEach(function(doc) {
+          var d = doc.data();
+          d._id = doc.id;
+          all.push(d);
+        });
+        all.sort(function(a, b) { return (a.classLevel || '12') > (b.classLevel || '12') ? 1 : -1; });
+
+        var sheets11 = [], sheets12 = [];
+        all.forEach(function(d) {
+          var item = '<div class="sheet-card">' +
+            '<h4>' + d.name + '</h4>' +
+            '<div class="meta" style="margin-top:6px;"><span class="badge badge-active">Published</span> &middot; ' + (d.createdAt ? new Date(d.createdAt.toMillis()).toLocaleDateString() : '') + '</div>' +
+            '</div>';
+          if (d.classLevel == 11) sheets11.push(item);
+          else sheets12.push(item);
+        });
+
+        var html = '';
+        if (sheets11.length) {
+          html += '<div class="class-section">' +
+            '<h3 style="font-size:1.1rem;color:var(--primary);margin-bottom:16px;"><i class="fas fa-graduation-cap"></i> Class 11 Results</h3>' +
+            '<div class="sheets-grid">' + sheets11.join('') + '</div></div>';
+        }
+        if (sheets12.length) {
+          html += '<div class="class-section">' +
+            '<h3 style="font-size:1.1rem;color:var(--primary);margin-bottom:16px;"><i class="fas fa-graduation-cap"></i> Class 12 Results</h3>' +
+            '<div class="sheets-grid">' + sheets12.join('') + '</div></div>';
+        }
+        container.innerHTML = html || '<div class="empty-sheets"><i class="fas fa-info-circle"></i> No published results yet.</div>';
+      } catch(e) {
+        container.innerHTML = '<div class="empty-sheets"><i class="fas fa-exclamation-circle"></i> Error loading results.</div>';
+      }
+    }
+
+    async function searchResult() {
+      var sheetId = document.getElementById('resultSheet').value;
+      var symbol = document.getElementById('symbolNumber').value.trim();
+      var display = document.getElementById('resultDisplay');
+      var status = document.getElementById('searchStatus');
+
+      if (!sheetId) { status.innerHTML = '<span style="color:var(--danger);"><i class="fas fa-exclamation-circle"></i> Please select a result sheet.</span>'; return; }
+      if (!symbol) { status.innerHTML = '<span style="color:var(--danger);"><i class="fas fa-exclamation-circle"></i> Please enter your symbol number.</span>'; return; }
+
+      status.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Searching...';
+      display.innerHTML = '';
+
+      try {
+        var doc = await db.collection('resultSheets').doc(sheetId).get();
+        if (!doc.exists) { status.innerHTML = '<span style="color:var(--danger);"><i class="fas fa-exclamation-circle"></i> Result sheet not found.</span>'; return; }
+        var sheet = doc.data();
+
+        var webUrl = sheet.webUrl;
+        if (!webUrl) {
+          status.innerHTML = '<span style="color:var(--text-light);"><i class="fas fa-info-circle"></i> Result system is being configured. Please check back later.</span>';
+          display.innerHTML = '';
+          return;
+        }
+        sheetsService.setWebAppUrl(webUrl);
+        var tabName = sheet.tabName || sheet.name;
+        var result = await sheetsService.fetchResult(tabName, symbol, sheet.sheetId);
+
+        status.innerHTML = '';
+
+        var gpa = result['GPA'] || result['Gpa'] || '';
+        var grade = result['GRADE'] || result['Grade'] || result['Result'] || '';
+        var isNg = grade === 'NG';
+
+        var nameKey = Object.keys(result).find(function(k){return /name|student/i.test(k)&&!/TH|PR/i.test(k);})||'';
+        var studentName = result[nameKey]||'';
+
+        var icon = isNg ? 'fa-exclamation-triangle' : 'fa-star';
+        var color = isNg ? '#c62828' : '#2e7d32';
+        var title = isNg ? 'Better luck next time' : 'Congratulations!';
+        var msg = isNg ? 'Your GPA is <strong style="font-size:28px;color:' + color + ';">' + gpa + '</strong>' : 'Your GPA is <strong style="font-size:28px;color:' + color + ';">' + gpa + '</strong>';
+
+        display.innerHTML = '<div class="result-summary">' +
+          '<div style="text-align:center;">' +
+          '<div style="font-size:48px;color:' + color + ';margin-bottom:12px;"><i class="fas ' + icon + '"></i></div>' +
+          '<p style="font-size:14px;color:var(--text-light);margin:0 0 4px;">' + sheet.name + '</p>' +
+          '<p style="font-size:16px;color:var(--text);margin:0 0 8px;"><strong>Symbol No:</strong> ' + symbol + '</p>' +
+          (studentName ? '<p style="font-size:16px;color:var(--text);margin:0 0 16px;"><strong>Student:</strong> ' + studentName + '</p>' : '') +
+          '<p style="font-size:22px;font-weight:700;color:var(--text);margin:0 0 8px;">' + title + '</p>' +
+          '<p style="font-size:18px;color:var(--text-light);margin:0;">' + msg + '</p>' +
+          '</div></div>';
+
+        display.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch(e) {
+        status.innerHTML = '<span style="color:var(--danger);"><i class="fas fa-exclamation-circle"></i> ' + (e.message || 'Result not found for this symbol number.') + '</span>';
+        display.innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html>

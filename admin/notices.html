@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notices - Canvas+2 College of Management</title>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <script>if ((localStorage.getItem('adminTheme') || 'light') === 'dark') document.documentElement.classList.add('dark');</script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+  <style>
+    #noticeContent { min-height:100px; resize:vertical; }
+    .notice-type-badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.7rem; font-weight:600; text-transform:uppercase; background:#dbeafe; color:#1a3c6d; margin-left:6px; }
+    .notice-type-badge.image { background:#fce7f3; color:#9d174d; }
+    .notice-type-badge.image_text { background:#ede9fe; color:#5b21b6; }
+    .notice-type-badge.link { background:#d1fae5; color:#065f46; }
+    .notice-type-badge.image_text_link { background:#e0e7ff; color:#3730a3; }
+    .notice-field-group { display:none; }
+    .notice-field-group.show { display:block; }
+    .notice-preview-img { max-width:120px; max-height:60px; border-radius:4px; margin-top:4px; object-fit:cover; }
+  </style>
+</head>
+<body class="admin-body">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon"><img src="../assets/images/logo.png" alt="Canvas+2"></div>
+      <div class="sidebar-logo-text">
+        <span>Canvas+2 College of Management</span>
+        <small>Admin Panel</small>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a href="users.html" class="sidebar-link"><i class="fas fa-users"></i> Users</a>
+      <a href="team.html" class="sidebar-link"><i class="fas fa-user-friends"></i> Team</a>
+      <a href="slider.html" class="sidebar-link"><i class="fas fa-images"></i> Slider</a>
+      <a href="notices.html" class="sidebar-link active"><i class="fas fa-bullhorn"></i> Notices</a>
+
+      <a href="contacts.html" class="sidebar-link"><i class="fas fa-envelope"></i> Contacts</a>
+      <a href="admissions.html" class="sidebar-link"><i class="fas fa-user-graduate"></i> Admissions</a>
+      <span class="sidebar-nav-label">Results</span>
+      <a href="view-result.html" class="sidebar-link"><i class="fas fa-file-invoice"></i> View Result</a>
+      <a href="results.html" class="sidebar-link"><i class="fas fa-cog"></i> Manage Sheets</a>
+    </nav>
+    <a href="../index.html" class="sidebar-link" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+    <div class="sidebar-footer">
+      <button class="sidebar-link" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="admin-header">
+      <div class="header-left">
+        <button class="header-btn mobile-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <h1>Notices</h1>
+      </div>
+      <div class="header-right">
+        <button class="header-btn" onclick="toggleAdminTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="admin-avatar" id="adminAvatar">A</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title"><i class="fas fa-bullhorn"></i> All Notices</span>
+          <div class="panel-actions">
+            <button class="btn btn-primary" onclick="openAddNoticeModal()"><i class="fas fa-plus"></i> Add Notice</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:40px;">Order</th>
+                  <th>Notice</th>
+                  <th>Status</th>
+                  <th>Created</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+                <tbody id="noticesTableBody">
+                  <tr><td colspan="5" style="text-align:center;">Loading notices...</td></tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="noticeModal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title" id="noticeModalTitle">Add Notice</span>
+        <button class="modal-close" onclick="closeNoticeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="noticeForm">
+          <div class="form-group">
+            <label for="noticeType">Type</label>
+            <select id="noticeType" class="form-control" onchange="showNoticeTypeFields()">
+              <option value="text">Text Notice</option>
+              <option value="image">Image Notice</option>
+              <option value="image_text">Image + Text Notice</option>
+              <option value="link">Link Notice</option>
+              <option value="image_text_link">Image + Text + Link Notice</option>
+            </select>
+          </div>
+          <div class="form-group" id="titleField">
+            <label for="noticeTitle">Title</label>
+            <input type="text" id="noticeTitle" class="form-control" placeholder="e.g. Exam Schedule">
+          </div>
+          <div class="form-group notice-field-group" id="textFields">
+            <label for="noticeContent">Content</label>
+            <textarea id="noticeContent" class="form-control" placeholder="Notice details..."></textarea>
+          </div>
+          <div class="form-group notice-field-group" id="imageFields">
+            <label for="noticeImageUrl">Image URL</label>
+            <input type="url" id="noticeImageUrl" class="form-control" placeholder="https://example.com/image.jpg">
+            <img id="noticeImagePreview" class="notice-preview-img" style="display:none;" alt="">
+          </div>
+          <div class="form-group notice-field-group" id="linkFields">
+            <label for="noticeLinkUrl">Link URL</label>
+            <input type="url" id="noticeLinkUrl" class="form-control" placeholder="https://example.com/page">
+            <label for="noticeLinkText" style="margin-top:8px;display:block;">Link Text</label>
+            <input type="text" id="noticeLinkText" class="form-control" placeholder="e.g. Click here for details">
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" onclick="closeNoticeModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Notice</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="../assets/js/firebase-config.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/admin/admin.js"></script>
+  <script src="../assets/js/admin/notices.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Submissions - Canvas+2 College of Management</title>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <script>if ((localStorage.getItem('adminTheme') || 'light') === 'dark') document.documentElement.classList.add('dark');</script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+</head>
+<body class="admin-body">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon"><img src="../assets/images/logo.png" alt="Canvas+2"></div>
+      <div class="sidebar-logo-text">
+        <span>Canvas+2 College of Management</span>
+        <small>Admin Panel</small>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a href="users.html" class="sidebar-link"><i class="fas fa-users"></i> Users</a>
+      <a href="team.html" class="sidebar-link"><i class="fas fa-user-friends"></i> Team</a>
+      <a href="slider.html" class="sidebar-link"><i class="fas fa-images"></i> Slider</a>
+      <a href="notices.html" class="sidebar-link"><i class="fas fa-bullhorn"></i> Notices</a>
+
+      <a href="contacts.html" class="sidebar-link active"><i class="fas fa-envelope"></i> Contacts</a>
+      <a href="admissions.html" class="sidebar-link"><i class="fas fa-user-graduate"></i> Admissions</a>
+      <span class="sidebar-nav-label">Results</span>
+      <a href="view-result.html" class="sidebar-link"><i class="fas fa-file-invoice"></i> View Result</a>
+      <a href="results.html" class="sidebar-link"><i class="fas fa-cog"></i> Manage Sheets</a>
+    </nav>
+    <a href="../index.html" class="sidebar-link" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Website</a>
+    <div class="sidebar-footer">
+      <button class="sidebar-link" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Sign out</button>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <header class="admin-header">
+      <div class="header-left">
+        <button class="header-btn mobile-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <h1>Contact Submissions</h1>
+      </div>
+      <div class="header-right">
+        <button class="header-btn" onclick="toggleAdminTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="admin-avatar" id="adminAvatar">A</div>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title"><i class="fas fa-envelope"></i> All Submissions</span>
+          <div class="panel-actions">
+            <button class="btn btn-primary" onclick="loadContacts()"><i class="fas fa-sync"></i> Refresh</button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:40px;">S.N.</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Message</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="contactsTableBody">
+                <tr><td colspan="8" style="text-align:center;">Loading contacts...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Contact Message</span>
+        <button class="modal-close" onclick="closeModal('contactModal')"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="contactModalBody">
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="../assets/js/firebase-config.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/admin/admin.js"></script>
+  <script src="../assets/js/admin/contacts.js"></script>
+</body>
+</html>
