@@ -30,23 +30,23 @@ const authService = {
   },
 
   renderAdminTeacherButtons() {
-    var actions = document.querySelector('.header-actions');
-    if (!actions) return;
+    var container = document.querySelector('.admin-footer-links') || document.querySelector('footer');
+    if (!container) return;
     if (this.isAdmin() && !document.querySelector('.admin-nav-item')) {
       var a = document.createElement('a');
       a.className = 'admin-nav-item';
       a.href = 'admin/index.html';
-      a.innerHTML = '<i class="fas fa-shield-alt"></i> Admin';
-      a.style.cssText = 'display:inline-flex;align-items:center;gap:4px;background:var(--primary);color:#fff!important;border-radius:50px;padding:5px 14px;font-size:0.82rem;text-decoration:none;';
-      actions.appendChild(a);
+      a.innerHTML = '<i class="fas fa-shield-alt"></i> Admin Panel';
+      a.style.cssText = 'display:inline-flex;align-items:center;gap:4px;background:var(--accent);color:#1a1a1a!important;border-radius:50px;padding:5px 14px;font-size:0.8rem;text-decoration:none;font-weight:600;';
+      container.appendChild(a);
     }
     if (this.isTeacher() && !document.querySelector('.teacher-nav-item')) {
       var a = document.createElement('a');
       a.className = 'teacher-nav-item';
       a.href = 'teacher/index.html';
-      a.innerHTML = '<i class="fas fa-chalkboard-teacher"></i> Teacher';
-      a.style.cssText = 'display:inline-flex;align-items:center;gap:4px;background:#2da44e;color:#fff!important;border-radius:50px;padding:5px 14px;font-size:0.82rem;text-decoration:none;';
-      actions.appendChild(a);
+      a.innerHTML = '<i class="fas fa-chalkboard-teacher"></i> Teacher Panel';
+      a.style.cssText = 'display:inline-flex;align-items:center;gap:4px;background:#2da44e;color:#fff!important;border-radius:50px;padding:5px 14px;font-size:0.8rem;text-decoration:none;font-weight:600;';
+      container.appendChild(a);
     }
   },
 

@@ -891,6 +891,7 @@ footer {
   letter-spacing: 0.3px;
 }
 footer strong { color: var(--accent-light); }
+.admin-footer-links { margin-top: 12px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
 /* ============ 404 ============ */
 .page-404 {
