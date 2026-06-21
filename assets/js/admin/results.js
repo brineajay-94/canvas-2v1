@@ -59,6 +59,7 @@ function openAddSheetModal() {
   document.getElementById('sheetModalTitle').textContent = 'Add Result Sheet';
   document.getElementById('sheetForm').reset();
   document.getElementById('sheetClassLevel').value = '';
+  document.getElementById('sheetGoogleId').value = '1xIhXnAxkF9Yr01OSjQAVBePc4Gp8RQLi91IfaKU0DHw';
   document.getElementById('testResult').textContent = '';
   resetDirty();
   openModal('sheetModal');
