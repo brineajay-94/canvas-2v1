@@ -362,7 +362,7 @@
         if (!webUrl) { status.innerHTML = '<span style="color:var(--color-fg-muted);"><i class="fas fa-info-circle"></i> No web URL configured.</span>'; return; }
         sheetsService.setWebAppUrl(webUrl);
         var tabName = sheet.tabName || sheet.name;
-        var result = await sheetsService.fetchResult(tabName, symbol, sheet.sheetId);
+        var result = await sheetsService.fetchResult(tabName, symbol, sheet.googleSheetId);
         status.innerHTML = '<span style="color:var(--color-success-emphasis);"><i class="fas fa-check-circle"></i> Result found!</span>';
 
         _sheetName = sheet.name;

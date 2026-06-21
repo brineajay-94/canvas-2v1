@@ -391,7 +391,7 @@
         }
         sheetsService.setWebAppUrl(webUrl);
         var tabName = sheet.tabName || sheet.name;
-        var result = await sheetsService.fetchResult(tabName, symbol, sheet.sheetId);
+        var result = await sheetsService.fetchResult(tabName, symbol, sheet.googleSheetId);
 
         status.innerHTML = '';
 
