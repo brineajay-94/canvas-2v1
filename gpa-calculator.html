@@ -73,6 +73,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How to use NEB GPA Calculator Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use this NEB GPA Calculator Nepal by adding your subjects, entering credit hours per NEB curriculum, and selecting your grades (A+ to NG). The calculator automatically computes your Grade Point Average using the standard NEB 4.0 grading scale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Class 12 GPA calculated in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Class 12 GPA in Nepal is calculated by dividing total grade points earned by total credit hours. Each grade (A+ = 4.0 to E = 0.8) is multiplied by subject credit hours, summed, then divided by total credit hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good GPA in NEB Class 11?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In NEB Class 11, a GPA of 3.6 (A) or above is excellent, 3.2 (B+) is very good, and 2.8 (B) is good. Competitive university programs typically require 2.8-3.2 GPA minimum."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum GPA in NEB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The maximum GPA in the NEB system is 4.0, achievable by scoring A+ (90% or above) in all subjects. This GPA Calculator Nepal tool uses the same 4.0 scale."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
@@ -376,7 +416,7 @@
       <div class="logo-area">
         <img src="assets/images/logo.png" alt="Canvas +2 College of Science, Law and Management" class="logo-img" loading="lazy" onerror="this.style.display='none'">
         <div class="logo-text">
-          <div style="font-size:1.35rem;font-weight:700;color:#1a3c6d;line-height:1.2;letter-spacing:0.5px;font-family:var(--font-heading);">Canvas +2 College of Science, Law and Management</div>
+          <div style="class="logo-heading">Canvas +2 College of Science, Law and Management</div>
           <p class="tagline">Excellence in Education</p>
         </div>
       </div>
@@ -540,10 +580,41 @@
         </div>
         <div class="faq-answer">NG stands for Non Graded. It is assigned when a student does not meet the minimum requirements for a grade in a subject. NG carries 0 grade points and does not contribute to your GPA calculation.</div>
       </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How to use this NEB GPA Calculator for Class 11?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">To use this NEB GPA Calculator for Class 11, add all your subjects from the Class 11 NEB curriculum with their correct credit hours and select the grade you obtained for each subject. The calculator will automatically compute your GPA using the NEB 4.0 grading scale.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How to calculate Class 12 GPA using this calculator?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">Calculating your Class 12 GPA is easy with this online GPA Calculator Nepal tool. Simply enter each subject from your Class 12 NEB curriculum, input the credit hours, and select your grades. The GPA is computed instantly using the standard NEB formula: total grade points divided by total credit hours.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is the highest GPA possible in NEB?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">The highest possible GPA in the NEB system is 4.0, which requires achieving A+ (90% or above) in all subjects. This NEB GPA calculator uses the same 4.0 scale to compute your grade point average accurately.</div>
+      </div>
     </div>
   </section>
 
   <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="admission.html">Admission</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="result.html">Result</a>
+      <a href="contact.html">Contact</a>
+    </div>
     <p>&copy; <span id="currentYear"></span> <strong>Canvas +2 College of Science, Law and Management</strong>. All rights reserved.</p>
   </footer>
 

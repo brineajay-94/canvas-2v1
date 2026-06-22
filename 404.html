@@ -79,6 +79,48 @@
     .contact-mini{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
     .contact-mini span i{margin-right:4px;font-size:.85rem;color:var(--accent-light)}
     header{background:var(--white);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000;border-bottom:3px solid var(--accent)}
+    .header-inner{max-width:var(--max-width);margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;position:relative}
+    .logo-area{display:flex;align-items:center;gap:14px}
+    .logo-img{width:50px;height:50px;object-fit:contain;border-radius:50%;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .logo-text h1,.logo-title{font-family:var(--font-heading);font-size:1.35rem;color:var(--primary);line-height:1.2;letter-spacing:.5px}
+    .logo-text .tagline{font-size:.75rem;color:var(--text-light);letter-spacing:.4px;font-weight:500}
+    .header-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    nav ul{display:flex;gap:6px;align-items:center}
+    nav ul li a{font-size:.92rem;font-weight:500;color:var(--text);padding:8px 16px;border-radius:50px;transition:var(--transition)}
+    nav ul li a:hover,nav ul li a.active{background:var(--off-white);color:var(--primary)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+    .nav-toggle span{display:block;width:25px;height:3px;background:var(--primary);border-radius:3px;transition:var(--transition)}
+    footer{background:var(--primary);color:rgba(255,255,255,.8);text-align:center;padding:22px 28px;font-size:.88rem}
+    footer strong{color:var(--accent-light)}
+    .page-404{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:var(--off-white)}
+    .page-404 h1{font-size:6rem;color:var(--primary);font-family:var(--font-heading);line-height:1}
+    .page-404 p{font-size:1.15rem;color:var(--text-light);margin:16px 0 24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 28px;font-size:1rem;font-weight:600;border-radius:50px;transition:var(--transition);border:none;cursor:pointer}
+    .btn-primary{background:var(--primary);color:var(--white)}
+    .btn-primary:hover{background:var(--primary-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,60,109,.3)}
+    .btn-lg{padding:14px 36px;font-size:1.05rem}
+    @media(max-width:768px){
+      .nav-toggle{display:flex;margin-left:auto}
+      nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:16px;box-shadow:var(--shadow-lg);gap:4px;z-index:100}
+      nav ul.open{display:flex}
+      nav ul li a{width:100%}
+      .top-bar-inner{flex-direction:column;text-align:center;gap:6px;padding:8px 14px}
+      .top-bar{font-size:.8rem}
+      .contact-mini{justify-content:center}
+    }
+    @media(max-width:480px){
+      .header-inner{justify-content:flex-start;gap:8px;padding:10px 14px}
+      .logo-img{width:40px;height:40px}
+      .logo-text h1{font-size:1.05rem}
+      .page-404 h1{font-size:4rem}
+      .page-404 p{font-size:1rem}
+    }
+  </style>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://www.gstatic.com">
+  <link rel="dns-prefetch" href="https://www.gstatic.com">
+</head>
 <body>
   <div class="top-bar">
     <div class="top-bar-inner">
@@ -95,7 +137,7 @@
       <div class="logo-area">
         <img src="https://canvascollege.ajaykafle.com.np/assets/images/logo.png" alt="Canvas +2 College of Science, Law and Management" class="logo-img" onerror="this.style.display='none'">
         <div class="logo-text">
-          <h1>Canvas +2 College of Science, Law and Management</h1>
+          <div class="logo-title">Canvas +2 College of Science, Law and Management</div>
           <p class="tagline">Excellence in Education</p>
         </div>
       </div>
@@ -125,6 +167,17 @@
   </main>
 
   <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="admission.html">Admission</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="result.html">Result</a>
+      <a href="gpa-calculator.html">GPA Calculator</a>
+      <a href="contact.html">Contact</a>
+    </div>
     <p>&copy; <span id="currentYear"></span> <strong>Canvas +2 College of Science, Law and Management</strong>. All rights reserved.</p>
   </footer>
 
