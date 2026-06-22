@@ -79,24 +79,24 @@ header {
   z-index: 1000;
   border-bottom: 2px solid var(--accent);
 }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth;   scroll-padding-top: 60px; }
 .header-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 8px 28px;
+  padding: 6px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   border-radius: 50%;
   background: var(--white);
@@ -112,14 +112,14 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   letter-spacing: 0.4px;
 }
 .logo-text .tagline {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-light);
   letter-spacing: 0.3px;
   font-weight: 500;
 }
 .logo-heading {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--primary);
   line-height: 1.2;
@@ -1006,10 +1006,10 @@ footer strong { color: var(--accent-light); }
   .section-title { font-size: 1.5rem; }
   .section-desc { font-size: 0.95rem; }
   .section { padding: 36px 18px; }
-  .header-inner { justify-content: flex-start; gap: 6px; padding: 6px 12px; }
-  .logo-img { width: 34px; height: 34px; }
-  .logo-text h1 { font-size: 0.92rem; }
-  .logo-text .tagline { font-size: 0.62rem; }
+  .header-inner { justify-content: flex-start; gap: 4px; padding: 4px 10px; }
+  .logo-img { width: 30px; height: 30px; }
+  .logo-heading { font-size: 0.82rem; }
+  .logo-text .tagline { font-size: 0.55rem; }
   .form-row { grid-template-columns: 1fr; }
   .top-bar-inner { flex-direction: column; text-align: center; gap: 6px; padding: 8px 14px; }
   .top-bar { font-size: 0.8rem; }
